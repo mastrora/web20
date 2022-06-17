@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/styles.css/' %}">
+<!--<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css/' %}">-->
+
+
+<script src="{% static 'js/scripts.js' %}"></script>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>souto-instalaciones... Contacto</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- <img class="logo" src="{% static 'images/logo.png' %}" alt="..." /></div>-->
+            <div class="container px-5">                
+                <a class="navbar-brand" style="color: orange;" href="#!"></a>               
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="active"><a class="nav-link " aria-current="page" href="{% url 'index' %}">: : Inicio </a></li>
+                        <li class="active"><a class="nav-link " href="{% url 'sobre-nosotros' %}">Sobre nosotros</a></li>
+                        <li class="active"><a class="nav-link active" href="{% url 'contacto' %}">Contacto</a></li>
+                        <li class="active"><a class="nav-link" href="{% url 'servicios' %}">Fotos-instalaciones</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <hr style="height:4px;border:none;margin-top:0.5px;margin:0,5px" class="barra3" />
+        <a title="" href="/"><img class="logosouto" src="{% static '/images/logosouto.png/' %}" alt="..." /></div></a>
+<br>
+<br>
+
+<pre class="fotoparrafo">
+    Teléfono: 670650208
+
+    instalaciones.souto@gmail.com
+
+    Dirección: Vidaloíso 3 Bastavales 15280 Brión (A Coruña) ESPAÑA
+                  
+                        
+</h7></pre>
+<!--<a title="" href=""><img class="fotoparrafo" src="{% static 'images/fotoparrafo.png' %}" alt="..." /></div></a>-->
+<body class="bodycontacto">
+
+
+    {% csrf_token %}
+    {% load crispy_forms_tags %}
+  
+    <div class="containerN">
+
+        <form action="" name="fcontacto" class="formulario_contacto" method="post" id="signup">
+          {% csrf_token %}
+          
+          
+            <div class="header">
+            
+                <h3 class="formtitulo">Formulario de contacto </h3>
+                {{register_form.errors}}
+                <p></p>
+                
+            </div>
+             {{ form | crispy }}
+           <!-- <div class="sep"></div>
+      
+            <div class="inputs">
+    
+                <input type="name" placeholder="Nombre" name="nombre" required  maxlength="30" autofocus />
+            
+                <input type="email" placeholder="e-mail" name="correo" required maxlength="35"  />           
+                
+                <textarea rows="7" class="mensaje" type="message" name="mensaje"  placeholder="Mensaje" required  maxlength="700"></textarea>
+    
+                <!--<a class="olvido" href="#">Olvidé mi contraseña</a>-->
+     
+            <br>
+            <pre class="pdatosform">
+                PROTECCIÓN DE DATOS: Reglamento (UE) 2016/679 RGPD y LOPDGDD 3/2018.
+                INSTALACIONES ELECTRICIDAD Y FONTANERIA SOUTO SLU, como responsable del
+                tratamiento, tratará sus datos para gestionar las solicitudes de
+                información, dudas, consultas, sugerencias o quejas relacionados con 
+                nuestra actividad que se realizan a través de la página web. Podrá
+                ejercitar los derechos de acceso, rectificación y supresión de los
+                datos, entre otros, tal y como se explica en la información
+                adicional que está a su disposición en la Política de Privacidad.</h7></pre>    
+                <div class="checkboxy">
+                   <input name="avisos" id="checky" value="1" type="checkbox" required >&nbsp;<label class="terms"> He leído y Acepto la  <a class="color-enlace-politica" title="" href="{% url 'politicas' %}">Política de Privacidad</a></label>
+                <br>
+                </div>
+            <div>    
+               
+            </div class="d-flex justify-content-end">
+            <br>
+                <input type="reset" value="cancelar" class="btn btn-secondary"></input>
+                &nbsp;
+                <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+            
+            </div>
+    
+            <script type="text/javascript">
+                function disableSending() {
+                document.fcontacto.enviar.disabled = !document.fcontacto.avisos.checked;
+                };
+                </script>      
+      
+        </form> <!--checked onclick="disableSending();"-->
+     
+    </div>
+
+
+</form>
+ 
+</body>
+
+<table id="tablacontactos">
+
+</table>
+
+<!--
+<h3 class="aumentopagina"> 
+
+-->
+
+
+
+
+ 
+<!--
+
+<div class="containerN">
+
+    <form action="" name="fcontacto" class="formulario_contacto" method="post" id="signup">
+      {% csrf_token %}
+  
+        <div class="header">
+        
+            <h3>Inicia sesión</h3>
+            
+            <p>Quieres cubrir este formulario</p>
+            
+        </div>
+        
+        <div class="sep"></div>
+  
+        <div class="inputs">
+
+            <input type="name" placeholder="Nombre" name="nombre" />
+        
+            <input type="email" placeholder="e-mail" name="correo" autofocus />           
+            
+            <textarea rows="7" class="mensaje" type="message" name="mensaje"  placeholder="Mensaje"></textarea>
+
+            <a class="olvido" href="#">Olvidé mi contraseña</a>
+
+
+                              
+            <div class="checkboxy">
+                <input name="avisos" id="checky" value="1" type="checkbox" checked onclick="disableSending();"><label class="terms">Acepto la política de privacidad</label>
+            </div>
+            
+            <button type="submit" id="submit" name="enviar"> Enviar</button>
+        
+        </div>
+
+        <script type="text/javascript">
+            function disableSending() {
+            document.fcontacto.enviar.disabled = !document.fcontacto.avisos.checked;
+            };
+            </script>      
+  
+    </form>
+  
+  </div>-->
+  
