@@ -33,7 +33,7 @@ RECAPTCHA_PRIVATE_KEY = '6LdU_AYdAAAAABAXXzpRp0OrFtuRy-TfIW59mN7B'
 DEBUG = False
 
 ALLOWED_HOSTS = ['51.91.45.195', 'souto-instalacioneselectricidadyfontaneria.es']
-#
+# 
 #
 # Application definition
 
@@ -97,6 +97,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 """
 
 DATABASES = {
